@@ -1,0 +1,13 @@
+<p>custompipe works!</p>
+<!-- <div class="text-center">
+    {{user.city | highlight:user.city }}
+</div> -->
+
+<!-- <div [innerHTML]="user.city | highlight:user.city">
+</div> -->
+
+<ul>
+    <li *ngFor="let users of user">
+        <div [innerHTML]="users.city | highlight:users.cityCode"></div>
+    </li>
+</ul>

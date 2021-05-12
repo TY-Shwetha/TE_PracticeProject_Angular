@@ -1,0 +1,13 @@
+<p>pipes works!</p>
+<div class="text-center">
+    {{user.firstName | lowercase}},{{user.lastName | uppercase}}
+</div>
+<div class="text-center">
+{{user.dob | date:'MMMM dd'}}
+</div>
+<div class="text-center">
+    {{user.salary | currency:'INR':'code'}}
+</div>
+<div class="text-center">
+    {{user | json}}
+</div>

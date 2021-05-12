@@ -1,0 +1,17 @@
+h2{
+    text-align: center;
+}
+.available{
+    color: green;
+    background-color: yellow;
+}
+
+.unavailable{
+    color:blue;
+    background-color:pink;
+}
+
+div{
+    text-align: center;
+    
+}

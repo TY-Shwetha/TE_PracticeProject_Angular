@@ -1,0 +1,14 @@
+{
+    "contact":[
+    {"id":"1","FirstName":"Smitha","LastName":"Prabhu"},
+    {"id":"2","FirstName":"Sandesh","LastName":"Naik"},
+    {"id":"3","FirstName":"Ammar","LastName":"Shetty"},
+    {"id":"4","FirstName":"Varun","LastName":"Poojari"}
+    ],
+    "comments":[
+        {"id":"15","body":"Some Comment"}
+    ],
+    "profile":[
+        {"city":"Manipal"}
+    ]
+}

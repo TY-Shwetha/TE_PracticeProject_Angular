@@ -1,0 +1,48 @@
+<p>template works!</p>
+
+<div class="container">
+    <form  action="">
+        <div class="form-control">
+            <label for="firstname" >FirstName : </label><br>
+            <input
+             ngModel 
+             type="text"
+             name="firstname"
+              id="firstname"
+               #firstname="ngModel" 
+               class="form-control"
+               (change)="log(firstname)"
+               minlength="3" maxlength="10" pattern="[a-z]{5,10}"
+               required>
+               <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                    <div class="firstname.errors.required">First name is required</div>
+                    <div class="firstname.errors.minlength"> First name must be minimun of {{firstname.errors.minlength.requiredLength}}</div>
+                    <div class="firstname.errors.pattern">FirstName doesnot match the pattern</div>
+               </div>
+        </div>
+        <div class="form-control">
+            <label for="comment" >Comment</label>
+            <textarea
+            ngModel 
+             name="comment"
+             #comment="ngModel"
+              id="comment"
+               cols="1" rows="1"
+               (change)="log(firstname)"
+               class="form-control"
+                pattern="[a-zA-Z]{1,10}"
+               required>
+               </textarea>
+               <div class="alert alert-danger" *ngIf="comment.invalid && comment.touched">
+                    <div class="comment.errors.required">Comment  is required</div>
+                    <!-- <div class="comment.errors.minlength">Comment must be minimun of {{comment.errors.minlength.requiredLength}} character</div>
+                    <div class="comment.errors.maxlength">Comment must be maximum of {{comment.errors.minlength.requiredLength}} character</div> -->
+                    <!-- <div class="comment.errors.pattern">Comment must be in lower case only</div> -->
+               </div>
+        </div>
+        <div class="d-flex justify-content-between">
+        <button class="btn btn-primary ml-auto"   
+        >Submit</button>
+    </div>
+    </form>
+</div>

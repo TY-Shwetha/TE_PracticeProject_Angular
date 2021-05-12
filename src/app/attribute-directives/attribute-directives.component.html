@@ -1,0 +1,14 @@
+<!-- ng class -->
+
+<br><br><br>
+<h2 [ngClass]="{available:isAvailable,unavailable:!isAvailable}">This is ng class</h2>
+
+
+<!-- ng style -->
+<div [ngStyle]="{'color':color,'font-size':size+'px','font-weight':'bold'}">
+    This is style class
+</div>
+<input type="text" [(ngModel)]='color'>
+<br>
+<button (click)="size=size+10">+</button>
+<button (click)="size=size-10">-</button>
