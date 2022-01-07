@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   // getcontacts(){
   //   const contact_list=[
@@ -18,12 +18,27 @@ export class DataService {
   //   return contact_list;
   // }
 
-  dburl="http://localhost:3000/contact";
-  getContact(){
-    return this.http.get(this.dburl);
+  dbUrl = "http://localhost:3000/contact";
+
+  getContact() {
+    return this.http.get(this.dbUrl);
   }
-  callingTemplate(){
-  console.log("calling");
-  
+
+  createContact(createBody){
+    return this.http.post(this.dbUrl,createBody);
+  }
+
+  updateContact(id,updateBody){
+    const updateUrl="http://localhost:3000/contact/"+ id;
+    return this.http.put(updateUrl,updateBody);
+  }
+
+  deleteContact(id){
+    const deleteUrl="http://localhost:3000/contact/"+id;
+    return this.http.delete(deleteUrl);
+  }
+  callingTemplate() {
+    console.log("calling");
+
   }
 }

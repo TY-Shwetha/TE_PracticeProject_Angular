@@ -17,6 +17,8 @@ import { CustompipeComponent } from './custompipe/custompipe.component';
 import { HighlightPipe } from './highlight.pipe';
 import { ObservablesComponent } from './observables/observables.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 let routes:Routes=[
   {path:'intro',component:IntroComponent},
@@ -29,8 +31,9 @@ let routes:Routes=[
   {path:'contact',component:ContactListComponent},
   {path:'pipe',component:PipesComponent},
   {path:'custom',component:CustompipeComponent},
-  {path:'observables',component:ObservablesComponent}
-
+  {path:'observables',component:ObservablesComponent},
+  {path:'first',component:FirstComponent},
+  {path:'second',component:SecondComponent}
 ];
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ let routes:Routes=[
     PipesComponent,
     CustompipeComponent,
     HighlightPipe,
-    ObservablesComponent
+    ObservablesComponent,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,

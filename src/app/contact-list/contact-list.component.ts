@@ -7,6 +7,8 @@ import {DataService} from '../data.service';
 })
 export class ContactListComponent implements OnInit {
 
+  msgTrue=false;
+  msg=false;
   constructor(public ds:DataService) { }
 
   contactLists:any;
@@ -17,4 +19,22 @@ export class ContactListComponent implements OnInit {
     })
   }
 
+  addNewContact(){
+    const newFormData= {"id":"6","FirstName":"Prithvi","LastName":"Raj"};
+    this.ds.createContact(newFormData).subscribe(data=>{
+      return this.msg=true;
+    })
+  }
+
+  updateContact(id){
+    const newFormData= {"id":id,"FirstName":"Manoj","LastName":"Nayak"};
+    this.ds.updateContact(id,newFormData).subscribe(data=>{
+      return this.msgTrue=true;
+    })
+  }
+
+  deleteContact(id){
+    return this.ds.deleteContact(id).subscribe(data=>{
+    })
+  }
 }

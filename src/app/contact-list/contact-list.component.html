@@ -12,6 +12,13 @@
     <li *ngFor="let contact of contactLists">
         {{contact.FirstName}} {{contact.LastName}}
     </li>
-
 </ul>
-<button (click)="ds.callingTemplate">Calling Service</button>
+
+<button (click)="ds.getContact()">Calling Service</button>
+<button (click)="addNewContact()">Add Contacts</button>
+<h4 *ngIf="msgTrue">Contact created successfully</h4>
+
+<button (click)="updateContact(4)">Update Contacts</button>
+<h4 *ngIf="msg">Contact updated successfully</h4>
+
+<button (click)="deleteContact(1)">Delete Contact</button>
